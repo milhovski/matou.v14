@@ -4,7 +4,8 @@ const ApplicationCommand = require("../../structure/ApplicationCommand");
 
 module.exports = new ApplicationCommand({
     command: {
-        name: 'User Information',
+        name: 'user',
+        discription: 'Users profile',
         type: 2,
     },
     options: {
@@ -25,7 +26,7 @@ module.exports = new ApplicationCommand({
 
             return;
         }
-        
+
         const array = [
             `**Displayname:** ${target.user.displayName}`,
             `**Bot?** ${target.user.bot ? 'Yes' : 'No'}`,

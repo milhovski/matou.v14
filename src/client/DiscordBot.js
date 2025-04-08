@@ -8,6 +8,9 @@ const ComponentsListener = require("./handler/ComponentsListener");
 const EventsHandler = require("./handler/EventsHandler");
 const { QuickYAML } = require('quick-yaml.db');
 
+// bez ebychix predov po prikoly
+process.noDeprecation = true;
+
 class DiscordBot extends Client {
     collection = {
         application_commands: new Collection(),
@@ -52,7 +55,7 @@ class DiscordBot extends Client {
                 }]
             }
         });
-        
+
         new CommandsListener(this);
         new ComponentsListener(this);
     }
